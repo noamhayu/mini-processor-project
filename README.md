@@ -1,20 +1,30 @@
-# Mini-Processor & Assembly Project
+# Custom 10-Bit Mini-Processor Architecture (mini24)
 
-Hi! This is my final project for the "Computer Architecture" course. I worked on it with my project partner, Sharbel, and it was a great way to learn how computers actually work behind the scenes.
+Designed as part of the **Computer Architecture** course, this repository contains the complete gate- and block-level hardware implementation of **mini24**, a custom 10-bit CPU built from scratch in **Logisim**.
 
-The project is divided into two parts:
+---
 
-## 1. Hardware (Logisim)
-We designed a very simple 10-bit mini-processor (called mini24) from scratch.
-* Built using **Logisim**.
-* Supports 4 basic commands: AND, ADD, LDB, and HLT.
-* We connected basic components like Registers, an ALU, and a simple Control Unit.
+## Processor Architecture & Specifications
 
-## 2. Software (Assembly)
-We wrote a short Assembly program and ran it on the **Mano CPU Simulator**.
-* The program calculates the first 10 numbers of a geometric sequence.
-* Since our basic Assembly didn't have a "multiply" command, we wrote a loop that adds a number to itself to simulate multiplication.
+* **Word & Bus Width:** 10-bit datapath and instruction format.
+* **Core Components:**
+  * **ALU (Arithmetic Logic Unit):** Executes arithmetic and bitwise logic operations (`ADD`, `AND`).
+  * **Register File:** Dedicated internal registers for operand storage and accumulator operations.
+  * **Control Unit & Instruction Decoder:** Decodes opcodes and generates synchronous control signals across the datapath.
+* **Supported Instruction Set (ISA):**
+  * `ADD` – Arithmetic addition.
+  * `AND` – Bitwise logical AND.
+  * `LDB` – Load byte/word from memory into register.
+  * `HLT` – Halt processor execution.
 
-## Folders
-* `/Hardware/` - Logisim `.circ` file and the hardware planning report.
-* `/Software/` - The `.asm` code and the software report.
+---
+
+## Repository Contents
+* **Logisim Circuit (`.circ`):** Complete interactive processor schematic and simulation model.
+* **Hardware Design Report:** Detailed documentation of the instruction format, datapath routing, control logic truth tables, and simulation waveforms.
+
+---
+
+## Authors
+* **Noam Hayu**
+* **Sharbel**
