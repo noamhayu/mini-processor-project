@@ -27,4 +27,4 @@ Designed as part of the **Computer Architecture** course, this repository contai
 
 ## Authors
 * **Noam Hayu**
-* **Sharbel**
+* **Sharbel Marshi**
